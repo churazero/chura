@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>О нас — Питомник RED APPLE</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== только для этой страницы ===== */
+  .script { font-family: "Segoe Script", "Comic Sans MS", cursive; }
+
+  /* заголовок с меткой Pony Town */
+  .hero {
+    position: relative;
+    max-width: 720px;
+    margin: 44px auto 80px;
+    padding: 22px 20px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    text-align: center;
+  }
+  .hero h1 {
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    font-size: clamp(38px, 8vw, 72px);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .hero .tag {
+    position: absolute;
+    right: -50px;
+    bottom: -34px;
+    padding: 4px 18px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    color: var(--red);
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    font-size: clamp(18px, 3vw, 26px);
+  }
+
+  /* блоки «заголовок + текст» */
+  .block { max-width: 760px; margin-bottom: 44px; }
+
+  .label {
+    display: inline-block;
+    padding: 6px 20px;
+    margin-bottom: 14px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    font-size: clamp(22px, 4vw, 34px);
+    font-weight: 400;
+  }
+
+  .text {
+    min-height: 110px;
+    padding: 20px 24px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    font-size: 19px;
+    line-height: 1.6;
+  }
+  .text p + p { margin-top: 12px; }
+
+  @media (max-width: 820px) {
+    .hero .tag { right: -10px; }
+  }
+  @media (max-width: 480px) {
+    .text { padding: 16px 16px; font-size: 17px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html">Главная</a>
+  <a href="about.html" class="current">О нас</a>
+  <a href="map.html">Карта</a>
+  <a href="admins.html">Админ-состав</a>
+  <a href="rules.html">Правила</a>
+  <a href="residents.html">Постояльцы</a>
+  <a href="forum.html">Форум</a>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <h1>О нас</h1>
+    <span class="tag">Pony Town</span>
+  </header>
+
+  <section class="block">
+    <h2 class="label">Кто мы?</h2>
+    <div class="text">
+        <p>Питомник «Red Apple» к вашим пушистым услугам! 🍎</p>
+        <p>Мы уютный приют для пушистых питомцев: с первых дней о каждом заботится персонал, а на кухне готовят по-настоящему профессионально.</p>
+        <p>📌 Обитаем на Russian Safe #1</p>
+      </div>
+  </section>
+
+  <section class="block">
+    <h2 class="label">Чем занимаемся</h2>
+    <div class="text">
+        <p>Растим питомцев в уюте и ищем им семью. У нас бывают прогулки, дрессировка и медосмотры, а когда питомец дорастает до подходящего возраста, в дело вступают наши консультанты. Они присматриваются к каждому и подбирают человека, с которым ему будет по-настоящему хорошо.</p>
+        <p>Подберём для Вас не только хозяина, но и лучшего друга!</p>
+        <p>Последнее слово всегда за питомцем: отказаться от хозяина можно в любой момент. А ролить необязательно, это только для тех, кто хочет. В конце каждой игры мы устраиваем «Дострой Питомник», где вы сами обустраиваете территорию, а лучшие постройки попадают в наш тгк.</p>
+      </div>
+  </section>
+
+  <footer>Питомник RED APPLE</footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ===== ОБЩЕЕ ОФОРМЛЕНИЕ САЙТА RED APPLE ===== */
+
+/* ЦВЕТА: меняй тут, поменяется на всех страницах, которые подключают этот файл */
+:root {
+    --bg: #fffaf5;
+    --ink: #1b1b1b;
+    --red: #8b0000;
+    --paper: #fff6e6;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+  }
+  
+  /* верхняя полоска со ссылками */
+  .topbar {
+    border-bottom: 4px solid var(--ink);
+    padding: 8px 20px;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 15px;
+  }
+  .topbar a { color: var(--ink); text-decoration: none; }
+  .topbar a:hover,
+  .topbar a.current { color: var(--red); font-weight: 700; }
+  
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px 60px; }
+  
+  /* заголовок страницы */
+  .page-title {
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    font-size: clamp(32px, 6vw, 56px);
+    margin: 36px 0 32px;
+    padding-bottom: 12px;
+    border-bottom: 6px solid var(--ink);
+  }
+  .page-title span { color: var(--red); }
+  
+  footer {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 13px;
+    opacity: .6;
+  }
