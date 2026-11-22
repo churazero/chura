@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Постояльцы — Питомник RED APPLE</title>
+<link rel="stylesheet" href="style.css">
+<style>
+  /* ===== только для этой страницы ===== */
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 250px;
+    gap: 40px;
+    align-items: start;
+    margin-top: 30px;
+  }
+
+  /* --- заголовок --- */
+  .hero {
+    max-width: 520px;
+    margin-bottom: 36px;
+    padding: 22px 24px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+  }
+  .hero h1 {
+    font-family: "Segoe Script", "Comic Sans MS", cursive;
+    font-size: clamp(28px, 5vw, 44px);
+    font-weight: 400;
+    text-transform: lowercase;
+  }
+
+  /* --- карточки --- */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px 28px;
+  }
+  .card { display: flex; gap: 18px; }
+
+  .pic {
+    width: 160px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    overflow: hidden;
+  }
+  .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: pixelated; /* чтобы пиксельные картинки не мылились */
+  }
+
+  .info { padding-top: 2px; }
+  .nick { font-size: 26px; font-weight: 800; line-height: 1.15; word-break: break-word; }
+  .role { font-size: 18px; color: var(--red); font-weight: 600; margin-top: 4px; }
+
+  /* --- правая колонка --- */
+  .side {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+  }
+  .ask {
+    padding: 16px 18px;
+    border: 4px solid var(--ink);
+    border-radius: 4px;
+    background: #fff;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .side .env .label { font-size: 20px; }
+
+  /* --- телефоны --- */
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; }
+    .side { display: grid; grid-template-columns: repeat(2, 1fr); gap: 80px 20px; }
+    .side .ask { grid-column: 1 / -1; }
+  }
+  @media (max-width: 480px) {
+    .card { flex-direction: column; }
+    .pic { width: 100%; max-width: 220px; }
+    .side { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <a href="index.html">Главная</a>
+  <a href="about.html">О нас</a>
+  <a href="map.html">Карта</a>
+  <a href="admins.html">Админ-состав</a>
+  <a href="rules.html">Правила</a>
+  <a href="residents.html" class="current">Постояльцы</a>
+  <a href="art.html">Ваши рисунки</a>
+</nav>
+
+<div class="wrap">
+  <div class="layout">
+
+    <!-- ===== ЛЕВАЯ ЧАСТЬ ===== -->
+    <main>
+
+      <header class="hero">
+        <h1>наши постояльцы</h1>
+      </header>
+
+      <!--
+        КАК ДОБАВИТЬ ПОСТОЯЛЬЦА:
+        1. Скопируй один блок <article class="card">...</article> и вставь в конец списка.
+        2. Замени строку <div class="pic">...</div> на:
+             <div class="pic"><img src="residents/nick.png" alt="Ник"></div>
+           (картинку положи в папку residents)
+        3. Поменяй ник и роль.
+      -->
+
+      <section class="cards">
+
+        <article class="card">
+          <div class="pic">Будет позже</div>
+          <div class="info">
+            <div class="nick">Ник</div>
+            <div class="role">Роль</div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="pic">Будет позже</div>
+          <div class="info">
+            <div class="nick">Ник</div>
+            <div class="role">Роль</div>
+          </div>
+        </article>
+
+      </section>
+
+    </main>
+
+    <!-- ===== ПРАВАЯ КОЛОНКА ===== -->
+    <aside class="side">
+
+      <div class="ask">Ищите что-то другое?</div>
+
+      <a class="env" href="rules.html">
+        <div class="back"></div>
+        <div class="letter">Что можно, а что нельзя</div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <span class="label">Правила</span>
+      </a>
+
+      <a class="env" href="index.html">
+        <div class="back"></div>
+        <div class="letter">Назад на главную страницу</div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <span class="label">Главная</span>
+      </a>
+
+      <a class="env" href="admins.html">
+        <div class="back"></div>
+        <div class="letter">Кто за что отвечает</div>
+        <div class="front"></div>
+        <div class="flap"></div>
+        <span class="label">Админ-состав</span>
+      </a>
+
+    </aside>
+
+  </div>
+
+  <footer>Питомник RED APPLE</footer>
+</div>
+
+<script>
+  // На телефонах нет наведения: первое касание открывает конверт, второе — переходит по ссылке
+  if (window.matchMedia('(hover: none)').matches) {
+    const envs = document.querySelectorAll('.env');
+    envs.forEach(env => {
+      env.addEventListener('click', e => {
+        if (!env.classList.contains('open')) {
+          e.preventDefault();
+          envs.forEach(x => x.classList.remove('open'));
+          env.classList.add('open');
+        }
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
